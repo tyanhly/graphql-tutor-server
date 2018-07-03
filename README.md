@@ -12,8 +12,8 @@ src/constants/Db.js
 yarn install
 
 # Init setup
-npm init
+yarn run setup
 
 # Start server
-npm start
+yarn run start
 ```
