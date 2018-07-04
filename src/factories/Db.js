@@ -1,4 +1,3 @@
-
 import Sequelize from 'sequelize';
 import * as constants from '../constants/Db';
 
@@ -52,7 +51,7 @@ export const User = Db.instance.define('user', {
             // isEmail: true
         }
     }
-});
+}, {freezeTableName: true});
 
 /**
  * Post definition
@@ -66,7 +65,7 @@ export const Post = Db.instance.define('post', {
         type: Sequelize.STRING,
         allowNull: false
     }
-});
+}, {freezeTableName: true});
 
 
 User.hasMany(Post);

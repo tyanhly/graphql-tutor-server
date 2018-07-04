@@ -19,7 +19,5 @@ _.times(10, () =>{
             content: `This is content`
         });
     });
-
-
 });
 

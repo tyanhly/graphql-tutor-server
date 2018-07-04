@@ -5,18 +5,24 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
     "faker": "^4.1.0",
+    "graphql": "^0.13.2",
     "lodash": "^4.17.10",
     "mysql2": "^1.5.3",
     "sequelize": "^4.38.0"
   },
   "scripts": {
-    "start": "nodemon src/app.js --exec babel-node --presets babel-preset-env",
-    "setup": "nodemon src/setup.js --exec babel-node --presets babel-preset-env"
+    "dev": "nodemon src/app.js --exec babel-node --presets babel-preset-env",
+    "setup": "nodemon src/setup.js --exec babel-node --presets babel-preset-env",
+    "build": "babel src -d build --presets babel-preset-env",
+    "start": "node build/app.js",
+    "prestart": "npm run build"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "nodemon": "^1.17.5",
-    "babel-cli": "^6.26.0"
+    "nodemon": "^1.17.5"
   }
 }
